@@ -18,6 +18,7 @@
 		5B2324091D8BCEC90089C95B /* MCLaunchAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2324081D8BCEC90089C95B /* MCLaunchAdView.m */; };
 		5B23240C1D8BD1640089C95B /* adImage_lion.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B23240B1D8BD1640089C95B /* adImage_lion.png */; };
 		5B23240F1D8F97E50089C95B /* MCCountingButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B23240E1D8F97E50089C95B /* MCCountingButton.m */; };
+		5B2324111D92792A0089C95B /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 5B2324101D92792A0089C95B /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		5B23240B1D8BD1640089C95B /* adImage_lion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adImage_lion.png; sourceTree = "<group>"; };
 		5B23240D1D8F97E50089C95B /* MCCountingButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCountingButton.h; sourceTree = "<group>"; };
 		5B23240E1D8F97E50089C95B /* MCCountingButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCountingButton.m; sourceTree = "<group>"; };
+		5B2324101D92792A0089C95B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		5B2323C81D8BCE8F0089C95B = {
 			isa = PBXGroup;
 			children = (
+				5B2324101D92792A0089C95B /* README.md */,
 				5B2323D31D8BCE8F0089C95B /* MCLaunchAd */,
 				5B2323ED1D8BCE900089C95B /* MCLaunchAdTests */,
 				5B2323F81D8BCE900089C95B /* MCLaunchAdUITests */,
@@ -292,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B2324111D92792A0089C95B /* README.md in Sources */,
 				5B2323DC1D8BCE900089C95B /* ViewController.m in Sources */,
 				5B2323D91D8BCE8F0089C95B /* AppDelegate.m in Sources */,
 				5B2324091D8BCEC90089C95B /* MCLaunchAdView.m in Sources */,
@@ -522,6 +526,7 @@
 				5B2324001D8BCE900089C95B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B2324011D8BCE900089C95B /* Build configuration list for PBXNativeTarget "MCLaunchAdTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +535,7 @@
 				5B2324031D8BCE900089C95B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B2324041D8BCE900089C95B /* Build configuration list for PBXNativeTarget "MCLaunchAdUITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +544,7 @@
 				5B2324061D8BCE900089C95B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
