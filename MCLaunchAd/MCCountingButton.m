@@ -8,6 +8,7 @@
 
 #import "MCCountingButton.h"
 
+#pragma mark - MCCountingButton
 @interface MCCountingButton()
 @property (nonatomic, strong) UIBezierPath* path;
 @property (nonatomic, strong) CAShapeLayer* backgroundShapeLayer;
@@ -16,13 +17,6 @@
 
 @implementation MCCountingButton
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 -(instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -61,8 +55,8 @@
     self.shapeLayer.strokeEnd = 0.0f;
     self.shapeLayer.path = self.path.CGPath;
     [self.layer addSublayer:self.shapeLayer];
-    //修正坐标轴，逆时针旋转90度
-//    self.transform = CGAffineTransformRotate(CGAffineTransformIdentity, -M_PI / 2);
+    //修正坐标轴，逆时针旋转90度，从12点钟开始倒计时
+    self.shapeLayer.transform =  CATransform3DRotate(CATransform3DIdentity, M_PI / 2, 0, 0, -1);
     //
     [self setTitle:NSLocalizedString(@"跳过", nil) forState:UIControlStateNormal];
     [self setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
@@ -70,6 +64,7 @@
     self.titleLabel.font = [UIFont systemFontOfSize:10.0];
 }
 
+/*改变进度条末端位置，循环调用实现进度条刷新*/
 -(void)counting
 {
     //strokeEnd的取值范围是0.0到1.0，所以超出1.0时截取

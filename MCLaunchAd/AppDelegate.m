@@ -22,12 +22,18 @@
     /*
      简书主页：http://www.jianshu.com/users/1bacae3170dd/latest_articles
      */
-    //Initial Ad
+    /*添加广告
+     1.初始化，选择屏占比
+     2.设置广告总时长，可跳过，默认是6秒
+     3.启动计时器
+     */
 //    MCLaunchAdView* view = [[MCLaunchAdView alloc] initWithWindow:self.window with:MCAdViewTypeFullScreen];
 //    MCLaunchAdView* view = [[MCLaunchAdView alloc] initWithWindow:self.window with:MCAdViewTypeHalfScreen];
 //    MCLaunchAdView* view = [[MCLaunchAdView alloc] initWithWindow:self.window with:MCAdViewTypeThreeQuarters];
     MCLaunchAdView* view = [[MCLaunchAdView alloc] initWithWindow:self.window with:MCAdViewTypeFiveSixths];
-    view.clickBlock = ^(NSInteger tag){
+    [view setTimer:10];
+    [view startTimer];
+    view.clickBlock = ^(MCQuitLaunchAdStyle tag){
         switch (tag) {
             case MCQuitLaunchAdStyleTimeOut:{
                 NSLog(@"%@",NSLocalizedString(@"时间耗尽", nil));
