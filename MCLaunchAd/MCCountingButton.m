@@ -24,7 +24,6 @@
         //
         self.totalTime = 6;//默认总时长6秒
         self.tickTockInterval = 40;//默认25下每秒
-        //
         [self initialView];
     }
     return self;
@@ -52,6 +51,7 @@
     self.shapeLayer.lineCap = kCALineCapRound;
     self.shapeLayer.strokeColor = [UIColor colorWithRed:30.0/255.0 green:144.0/255.0 blue:255.0/255.0 alpha:1.0].CGColor;
     self.shapeLayer.strokeStart = 0.0f;
+    //通过不断修改stroEnd的值，使形成像动画刷新的效果，也可以使用CAAnimation的方式，动画的显示出来，duration设置为你广告总时长就可以
     self.shapeLayer.strokeEnd = 0.0f;
     self.shapeLayer.path = self.path.CGPath;
     [self.layer addSublayer:self.shapeLayer];

@@ -25,18 +25,27 @@ typedef NS_ENUM(NSUInteger, MCQuitLaunchAdStyle) {
 };
 
 /*块回调，广告结束后根据不同的结束方式处理下一步*/
-typedef void (^MCClick) (MCQuitLaunchAdStyle tag);
+typedef void (^MCClick) (MCQuitLaunchAdStyle style);
 
 /*广告*/
 #pragma mark - MCLaunchAdView
 @interface MCLaunchAdView : UIView
 
 @property (nonatomic, strong) UIWindow* window;
-@property (nonatomic, strong) NSString* localAdImage;//本地图片名
-@property (nonatomic, strong) NSString* urlAdImage;//网络图片名
+@property (nonatomic, strong) NSString* localImageName;//本地图片名
+@property (nonatomic, strong) NSString* imageURL;//网络图片名
 @property (nonatomic, copy) MCClick clickBlock;//块回调，处理不同的操作
 
+/**
+ *  初始化，根据类型进行初始化
+ */
 -(instancetype)initWithWindow:(UIWindow*)window with:(MCAdViewType)type;
+/**
+ *  设置计时器时长，不调用这个方法，就使用计时器默认的6秒
+ */
 -(void)setTimer:(NSInteger)time;
+/**
+ *  启动计时器
+ */
 -(void)startTimer;
 @end
